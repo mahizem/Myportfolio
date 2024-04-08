@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+    h2, h1{
+        cursor: pointer;
+        transition: all 0.5s ease;
+        text-align: center;
+      }
+       h2:hover, h1:hover {
+          margin-left: 20%;
+          margin-right: 20%;
+          color: black;
+          background-color: aliceblue;
+          border-radius: 2px;
+        }
+        
+        body{
+
+    background-color: black;
+        }
+        nav{
+            color: aquamarine;
+        }
+        section{
+            color: aquamarine;
+        }
+        p{
+            font-family: 'Times New Roman', Times, serif;
+             margin-left: 50px;
+            margin-bottom: 20px;
+             margin-top: 3px;
+        }
+        h3{
+        margin-left: 1px;
+        margin-bottom: 3px;
+        margin-top: 3px;
+        }
+       
+        ul,li,a{
+        margin-bottom: 3px;
+        margin-top: 3px;
+        }
+      
+    </style>
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    <nav >
+        <ul style="margin-left: 20%;">
+            <li ><a href="#home" style="margin-left: 10%;">Home</a></li>
+            <li ><a href="#about" style="margin-left: 10%;">About</a></li>
+            <li ><a href="#education" style="margin-left: 10%;">Education Details</a></li>
+            <li ><a href="#contact" style="margin-left: 10%;">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home" style="position: relative; margin-left: 15%; margin-right: 15%;">
+        <h2 style=" margin: auto; display: block; margin-left: 47%; ">Welcome to My Portfolio</h2>
+        <p  style=" margin: auto; display: block; margin-left: 40%; margin-bottom: 8%; padding-top: 3%;">
+             <strong> Full Name : </strong> Mahlet Adugna Zemenu <br>
+            <strong> Address : </strong> Addis Ababa , Summit <br>
+           <strong> Date of Birth : </strong>  March 3,2001 <br>
+            <strong> Place of Birth : </strong> Addis Ababa, Ethiopia <br>
+            <strong> Career Choice : </strong> Seinor Full Stack Web Developer  <br>
+            <strong> Currently : </strong> 5th Year Computer Engineering Student  <br>
+        </p>
+        <img src="photo/me1.jpg" alt="my photo" style="width: 250px; height: 200px; cursor: pointer; display: block; position: absolute; 
+           top: 0; left: 0; padding-left: 5%; padding-top: 5%;">
+        
+    </section>
+    <section id="about" style="position: relative; margin-left: 15%; margin-right: 15%;">
+        <h2 style="margin-bottom: 3px; margin-top: 30px; margin-bottom: 30px;" >About Me</h2>
+        <p>Growing up in a family were simple interactions with a computer like knowing how to change the backgroung image of a desktop 
+            is valued, I often find myself dwelling in creating impressive things to be applaud by , following this it was very easy 
+to decide what major to choose in collage. In my collage years I took trainings in SheCodes and have recived a certificate . After graduation I have a dream in becoming a senior full stack web developer working in my own company 
+ and making magic happen !!! And I honestly believe that this training will give me all the right ingredients that will guide me through my path  </p>
+    </section>
+    <section id="education" style="position: relative; margin-left: 15%; margin-right: 15%;">
+        <h2 style="margin-bottom: 3px; margin-top: 30px;">Education Details</h2>
+        <ul >
+            
+                 <li >
+                <h3 > Primary School </h3>
+                <a href="education/grade8.pdf" target="_blank" ><p> Grade 8 </p></a>
+                
+            </li>
+            <li>
+                <h3>High School</h3>
+                 <a href="education/Transcript.pdf" target="_blank"><p> Transcript </p></a>
+                   <a href="education/grade12.pdf" target="_blank"><p> Grade 12 </p></a>
+                
+            </li>
+            <li>
+                 <h3>Higher Education</h3>
+                   <p> I am currently a 5th year Computer Enginnering Student and can provide information regarding my grade report if needed</p></a>
+
+               
+            </li>
+  
+        </ul>
+    </section>
+    <section id="contact" style="position: relative; margin-left: 10%; margin-right: 10%;">
+        <h2 style="margin-bottom: 30px; text-align: center;">Contact Me</h2>
+        <div style="margin-bottom: 4%; margin-left: 20%;">
+    <strong> Email </strong> <a href="mailto: mahletzemen@gmail.com" target="_blank" ><img src="photo/emailicon.png" alt="git icon" 
+            style="width: 25px; height: 25px; margin-top: 1px;  position: absolute; display: block; cursor: pointer; margin-left: 10px;" ></a> <br>
+        </div>
+    <div style="margin-top: 2%; display: block; margin-left: 40%;  display: block; position: absolute; top: 65px; right: 200px;">
+            <strong> GitHub</strong> <a href="https://github.com/mahizem" target="_blank" >
+                <img src="photo/giticon.png" alt="git icon" style="cursor: pointer; width: 30px; height: 30px; margin-left: 20px; position: absolute; display: block;" ></a> <br>
+   </div>
+            </section>
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+    <script>
+       // JavaScript code
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Get the form values
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            
+            // Perform form validation (you can modify this part)
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all fields");
+                return;
+            }
+            
+            // Send the form data to the server (you can modify this part)
+            // For this example, we'll simply log the form data to the console
+            console.log("Name: " + name);
+            console.log("Email: " + email);
+            console.log("Message: " + message);
+            
+            // Optional: Reset the form fields
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+        });
+    </script>
+    </script>
+</body>
+</html>
